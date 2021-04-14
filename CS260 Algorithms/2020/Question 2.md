@@ -6,14 +6,14 @@ Input: Directed Graph G(V, E) with weights W where W<sub>e</sub> ≥ 0 for all e
 
 Output: Shortest path to all nodes from s.
 
-Running Time: O(|V|<sup>2</sup>) with queue or array, O(|E|*log(|V|)) with binary heaps.
+Running Time: O(|V|<sup>2</sup>) with queue or array, O(|E|\*log(|V|)) with binary heaps.
 
 ### (i) Bellman–Ford’s algorithm
 Input: Directed Graph G(V, E) with weights W, a source node s.
 
 Output: Shortest path to all nodes from s.
 
-Running Time: O(|V|*|E|)
+Running Time: O(|V|\*|E|)
 
 ## (b) [8 points] Suppose a connected undirected weighted graph G= (V, E) with positive  weights has a unique minimum spanning  tree T. Is it true that the path between every two distinct vertices in T is always a shortest path between these vertices in G? Give a proof or a counterexample.
 
