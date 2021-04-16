@@ -3,7 +3,7 @@
 ### i.
 X → Y
 Z → Y
-> For all $X = x_1$, $Y = y_1$, same for $X = x_2$. Therefore X → Y. Same for Z 
+> For all X = x₁, Y = y₁, same for X = x₂. Therefore X → Y. Same for Z 
 
 ### ii.
 X → Y
@@ -15,7 +15,7 @@ Z → Y
 > A → B → F
 > AC → E, 
 > C → D → G → H
-> A ↔ I
+> A <-> I
 
 R1 1NF:
 > 1NF: key of AC and assumed atomic
