@@ -69,7 +69,7 @@ R5 1NF:
 ### ii.
 R1(**A,C**, E) 
 
-R1’/5(**A**, B, I) 
+R1'/5(**A**, B, I) 
 
 R1''/4(**C**, D) 
 
@@ -78,9 +78,9 @@ R2(**B**, F)
 R3(**A,D**) 
 
 
-R4’(**D**, G) 
+R4'(**D**, G) 
 
-R4'’(**G**, H)
+R4''(**G**, H)
 
 Have to break I → A to form BCNF
 
