@@ -15,11 +15,13 @@ WHERE E.Salary > (
    
 ```
 > As limited to 1 join only, use an `IN` instead. 
+> 
 > Selects employees with salaries:
->     greater than the average salaries of:
->         employees who:
->             work on a project:
->                that is in Leamington
+>  - greater than the average salaries of:
+>  - employees who:
+>  - work on a project:
+>  - that is in Leamington
+>                
 
 ## Part B
 ```sql
@@ -40,8 +42,11 @@ WHERE SSSal > ANY (
 )
 ```
 > SupSup lists the employee’s supervisor’s supervisor with the employee
+> 
 > Filters SupSup for there being a supervisor with a lower salary than the supervisor’s supervisor
+> 
 > `WITH` is definitely unnecessary, it just organises the query a bit better
+> 
 
 ## Part C
 ```sql
@@ -58,6 +63,7 @@ FROM Employee E
 WHERE Address NOT LIKE '%London%' AND E.Salary > (MinSal * 1.2)
 ```
 > MinSal is the minimum salary of London employee’s working on X. 
+> 
 > Then use this to find employee’s outside London with >1.2x this minimum
 
 ## Part D
