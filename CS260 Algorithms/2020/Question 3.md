@@ -29,7 +29,7 @@
 
 Table is flat (let k = 2).
 
-## [12 points] Give a polynomial-time algorithm that, given an n×n flat table of integers, finds the length of the longest common subsequence of its n rows. Justify the correctness of your algorithm and prove that it runs in polynomial time.
+## (g) [12 points] Give a polynomial-time algorithm that, given an n×n flat table of integers, finds the length of the longest common subsequence of its n rows. Justify the correctness of your algorithm and prove that it runs in polynomial time.
 
 *This is a modified version of @TehDragonGuy#9740's algorithm* 
 
@@ -47,7 +47,6 @@ For each row r=(0,1...n):
             Store (count0, count1) in myList[r];
         If element = 1:
             count1 = count1 - 1;
-            Store (count0, count1) in myList[r];
 
 maxLength = 0;
 for k = 0 to n:
