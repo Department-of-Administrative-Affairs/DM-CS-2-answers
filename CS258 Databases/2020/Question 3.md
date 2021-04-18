@@ -3,25 +3,22 @@
 ```sql
 SELECT Super_ssn
 FROM EMPLOYEE E
-WHERE E.Salary > (
-    SELECT AVG(E.Salary)
-    FROM Employee E JOIN (
-        SELECT W.Essn FROM WORKS_ON W 
-        WHERE W.Pno IN 
-            (SELECT Pnumber FROM Project
-            WHERE Plocation = 'Leamington')
-    ) T ON E.Ssn = T.ESsn
+GROUP BY Super_ssn
+HAVING AVG(Salary) > (
+    SELECT AVG(Salary)
+    FROM EMPLOYEE F
+    JOIN DEPT_LOCATIONS L
+    ON F.Dno = L.Dnumber
+    Where L.Dlocation = 'Leamington'
 )
    
 ```
-> As limited to 1 join only, use an `IN` instead. 
-> 
-> Selects employees with salaries:
+> Selects supervisors whose supervisees have an average salary:
 >  - greater than the average salaries of:
 >  - employees who:
->  - work on a project:
+>  - work for a department:
 >  - that is in Leamington
->                
+>                     
 
 ## Part B
 ```sql
