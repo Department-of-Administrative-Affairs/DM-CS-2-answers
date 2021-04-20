@@ -5,12 +5,16 @@ X → Y
 
 Z → Y
 
-> For all X = x₁, Y = y₁, same for X = x₂. Therefore X → Y. Same for Z 
+XZ → Y
+
+> For all X = x₁, Y = y₁, same for X = x₂. Therefore X → Y. Same for Z and XZ
 
 ### ii.
 X → Y
 
 Z → Y
+
+XZ → Y
 
 > Unchanged
 
