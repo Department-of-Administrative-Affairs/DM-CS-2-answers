@@ -115,11 +115,11 @@ ABD is a candidate key, as both C and E are dependent on ABD and ABD is minimal.
 > {RM, D, S, Y} → {I, C, SN}
 > 
 
-Candidate keys: {C,S,Y,SN} and {C,S,Y,RM,D}
+Candidate keys: {C,S,Y,SN} and {S,Y,RM,D}
 
-C, S and Y are included in all keys as they do not depend on anything, and including C fulfils the first FD.
+S and Y must be included in all keys as they do not appear in the RHS of any functional dependency. 
 
-Then either SN or {RM, D} must be included to fulfil the 2nd then 3rd FD, or 3rd then 2nd respectively. 
+Then either {C, SN} or {RM, D} must be included to fulfil the 1st, 2nd then 3rd FD, or 3rd then 1st and 2nd respectively. 
 
 
 
