@@ -37,10 +37,10 @@ FROM (SELECT G.guestNo FROM Guest G WHERE guestName LIKE 'Peter %')
 SELECT price, roomNo, guestName
 FROM Room R JOIN Hotel H USING (hotelNo)
     LEFT JOIN (
-	SELECT hotelNo, guestName 
+	SELECT hotelNo, roomNo, guestName 
         FROM Booking B JOIN Guest G USING (guestNo)
 	WHERE CURDATE() BETWEEN B.dateFrom and B.dateTo
-    ) A USING (hotelNo)
+    ) A USING (hotelNo, roomNo)
 WHERE hotelName = 'Hilton Hotel'
 ```
 
