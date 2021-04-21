@@ -20,9 +20,9 @@
 | i | A | C | ii | A | C | iii | A | C |
 |---|---|---|----|---|---|-----|---|---|
 |   | 1 | 3 |    | 1 | 3 |     | 1 | 3 |
-|   |   |   |    |   |   |     | 2 | 3 |
+|   | 2 | 3 |    |   |   |     | 2 | 3 |
 
-> Both i and ii filter R for B=1 first: i as it is joining on B, where B can only be 1; ii explicitly. iii does not filter by B before cross joining, so R where B ≠ 1 is allowed
+> Both i and iii filter only S for B=1, whereas ii filters both R and S for B=1
 
 ## Part C
 I believe this should read:
