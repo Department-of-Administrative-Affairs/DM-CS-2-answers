@@ -66,4 +66,4 @@ CREATE VIEW EMPNOT AS
     GROUP BY (Dnumber);
 ```
 
-This query used the `WHERE` clause to allow us to use a subquery using the outer EMPLOYEE and DEPARTMENT attributes.
+This query used the `EXISTS` clause to allow us to use a subquery using the outer EMPLOYEE and DEPARTMENT attributes.
