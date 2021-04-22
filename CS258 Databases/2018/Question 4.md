@@ -34,4 +34,6 @@ Again, both A and B must be included in any key of R (as neither are dependent o
 
 { B, C } : BC -> D -> E, B -> A.
 
+{ B, E } : E -> D, B -> A, AD -> C.
+
 B must be included in any key of R (as it is not dependent on any other attribute), and only C or D can be combined with B to determine all other attributes. Therefore, these two keys are the only candidate keys.
