@@ -7,6 +7,8 @@ However, Role is dependent on a proper subset of the primary key (CastMember -> 
 Therefore, FILMS is in 1NF.
 
 ## Part B
+FILMSCAST(**FilmName**, **ReleaseYear**, **CastMember**, Pay)
+
 FILMS(**FilmName**, **ReleaseYear**, AgeRating)
 - (FilmName, ReleaseYear) -> AgeRating 
 
