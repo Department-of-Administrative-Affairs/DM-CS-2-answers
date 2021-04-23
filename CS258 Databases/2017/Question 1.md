@@ -1,4 +1,4 @@
-# Question 4
+# Question 1
 
 ## Part A
 
@@ -28,10 +28,10 @@ Here T<sub>1</sub> references a project number of 3 which doesn't exist in the P
 
 ```sql
 CREATE VIEW FMAN AS
-    SELECT Fname FROM DEPARTMENT
+    SELECT Fname FROM DEPARTMENT D
         INNER JOIN
-    EMPLOYEE
-        ON Ssn = Mgr_ssn;
+    EMPLOYEE E
+        ON E.Ssn = D.Mgr_ssn;
 ```
 
 ### ii
@@ -56,7 +56,7 @@ CREATE VIEW EMPNOT AS
             (
                 SELECT * FROM
                     (SELECT Pno FROM WORKS_ON WHERE Essn = E.Ssn)
-                        UNION
+                        INTERSECT
                     (SELECT Pnumber AS Pno FROM PROJECT
                         INNER JOIN
                     DEPARTMENT 
@@ -67,3 +67,16 @@ CREATE VIEW EMPNOT AS
 ```
 
 This query used the `EXISTS` clause to allow us to use a subquery using the outer EMPLOYEE and DEPARTMENT attributes.
+
+Alternative solution (more efficient):
+
+```sql
+CREATE VIEW EMPNOT AS 
+    SELECT Dnumber, COUNT(Ssn) FROM DEPARTMENT, EMPLOYEE
+        WHERE NOT Ssn IN 
+            (SELECT Essn AS Ssn FROM WORKS_ON 
+                JOIN 
+            PROJECT ON PROJECT.Pnumber=WORKS_ON.Pno 
+                WHERE Dnum=Dnumber)
+GROUP BY (Dnumber);
+```
