@@ -23,3 +23,4 @@ R<sub>4</sub>(**A**, **E**, F) : to remove the {A, E} -> {F} partial dependency.
 R<sub>5</sub>(**F**, I) : to remove transitive dependency.
 
 R<sub>6</sub>(**D**, G, H) : to remove transitive dependencies.
+
