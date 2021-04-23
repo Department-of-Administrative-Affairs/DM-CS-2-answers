@@ -8,7 +8,7 @@
 
 3NF - NO: Because it's not in 2NF
 
-Therefore this relation is in 2NF.
+Therefore this relation is in 1NF.
 
 ## Part B
 
