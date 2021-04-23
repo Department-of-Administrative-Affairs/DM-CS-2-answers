@@ -10,19 +10,20 @@
 
 ## Part C
 
-T<sub>1</sub> <- π<sub>Dlocation</sub> (σ<sub>DNumber=1</sub> (DEPT_LOCATIONS))
+T<sub>1</sub> ← π<sub>Dlocation</sub> (σ<sub>DNumber=1</sub> (DEPT_LOCATIONS))
 
-T<sub>2</sub> <- (DEPT_LOCATIONS) ÷ (T<sub>1</sub>)
+T<sub>2</sub> ← (DEPT_LOCATIONS) ÷ (T<sub>1</sub>)
 
 π<sub>Dname</sub>((T<sub>2</sub>) * (DEPARTMENT))
 
 ## Part D
 
-T<sub>1</sub> <- π<sub>Ssn</sub>(EMPLOYEE)
+E<sub>1</sub> ← (EMPLOYEE) ⋈<sub>Ssn = Essn</sub> (WORKS_ON)
 
-T<sub>2</sub> <- (p<sub>(Ssn1)</sub>T1)⋈<sub>Ssn1 < Ssn2</sub>(p<sub>(Ssn2)</sub>(T2))
+E<sub>2</sub> ← (EMPLOYEE) ⋈<sub>Ssn = Essn</sub> (WORKS_ON)
 
-T<sub>3</sub> <- ((T<sub>2</sub>)⋈<sub>Ssn1 = Essn</sub>(WORKS_ON))
+OS ← π<sub>E<sub>1</sub>.Ssn, E<sub>2</sub>.Ssn</sub> ((E<sub>1</sub>) ⋈<sub>E<sub>1</sub>.Ssn \< E<sub>2</sub>.Ssn AND E<sub>1</sub>.Pno != E<sub>2</sub>.Pno</sub> (E<sub>2</sub>))
 
-T<sub>4</sub> <- ((T<sub>2</sub>)⋈<sub>Ssn2 = Essn</sub>(WORKS_ON))
+S ← π<sub>E<sub>1</sub>.Ssn, E<sub>2</sub>.Ssn</sub> ((E<sub>1</sub>) ⋈<sub>E<sub>1</sub>.Ssn \< E<sub>2</sub>.Ssn AND E<sub>1</sub>.Pno = E<sub>2</sub>.Pno</sub> (E<sub>2</sub>))
 
+π<sub>Ssn1, Ssn2</sub> (ρ<sub>(Ssn1, Ssn2)</sub> (OS - S))
