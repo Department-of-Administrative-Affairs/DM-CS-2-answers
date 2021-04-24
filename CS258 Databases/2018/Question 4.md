@@ -1,6 +1,11 @@
 # Question 4
 ## Part A
+
 A set of attribute and domain pairs
+
+OR
+
+A relation name with a set of attributes (e.g. R(A, B, C))
 
 ## Part B
 The assumption states that what is not known to be true, is false. In relations, this translates to data not present in a relation to be taken as false.
@@ -36,4 +41,4 @@ Again, both A and B must be included in any key of R (as neither are dependent o
 
 { B, E } : E -> D, B -> A, AD -> C.
 
-B must be included in any key of R (as it is not dependent on any other attribute), and only C or D can be combined with B to determine all other attributes. Therefore, these two keys are the only candidate keys.
+B must be included in any key of R (as it is not dependent on any other attribute), and only C, D or E can be combined with B to determine all other attributes. Therefore, these two keys are the only candidate keys.
