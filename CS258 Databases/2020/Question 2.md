@@ -4,7 +4,7 @@
 
 | Part | Min           | Max           |
 |------|---------------|---------------|
-| i    | min(N_R, N_s) | N_R + N_s     |
+| i    | max(N_R, N_s) | N_R + N_s     |
 | ii   | 0             | N_R * N_S     |
 | iii  | 0             | N_R           |
 | iv   | N_R           | N_R           |
