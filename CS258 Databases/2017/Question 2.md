@@ -27,7 +27,7 @@ Department D
     ON E.Dno = D.Dnumber
 GROUP BY D.Dnumber
 HAVING 
-    COUNT(case Sex when "M" then 1 else 0 end) > COUNT (case Sex when "F" then 1 else 0 end);
+    SUM(case Sex when "M" then 1 else 0 end) > SUM(case Sex when "F" then 1 else 0 end);
 ```
 
 Alternative not using `case`:
