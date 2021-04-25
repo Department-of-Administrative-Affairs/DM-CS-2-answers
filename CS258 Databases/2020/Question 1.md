@@ -31,6 +31,14 @@ FROM (SELECT G.guestNo FROM Guest G WHERE guestName LIKE 'Peter %')
     INTERSECT (SELECT B.guestNo FROM Booking B WHERE B.dateTo IS NULL)
 ```
 
+Alternative using `IN`:
+
+```sql
+SELECT guestNo
+FROM (SELECT G.guestNo FROM Guest G WHERE guestName LIKE 'Peter %') 
+    WHERE G.guestNo IN (SELECT B.guestNo FROM Booking B WHERE B.dateTo IS NULL);
+```
+
 ## Part D
 
 ```sql
@@ -42,6 +50,19 @@ FROM Room R JOIN Hotel H USING (hotelNo)
 	WHERE CURDATE() BETWEEN B.dateFrom and B.dateTo
     ) A USING (hotelNo, roomNo)
 WHERE hotelName = 'Hilton Hotel'
+```
+
+Or (slightly different way of joining):
+
+```sql
+SELECT price, roomNo, guestName
+FROM Room R NATURAL JOIN Hotel H
+    LEFT OUTER JOIN (
+	SELECT hotelNo, roomNo, guestName 
+        FROM Booking B NATURAL JOIN Guest G
+	WHERE CURDATE() BETWEEN B.dateFrom and B.dateTo
+    ) A ON H.hotelNo = A.hotelNo AND R.roomNo = A.roomNo
+WHERE hotelName = 'Hilton Hotel';
 ```
 
 > The inner query gets the hotel, room number, and guest of any current booking, the outer query filters by hotel and room number and selects. `LEFT JOIN` so NULL if no booking current exists

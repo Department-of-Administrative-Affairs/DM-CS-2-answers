@@ -38,6 +38,19 @@ WHERE SSSal > ANY (
         JOIN Employee S ON E.Super_ssn = S.Ssn
 )
 ```
+
+```sql
+SELECT e1.Salary FROM employee e1 
+    INNER JOIN employee e2 ON e1.Super_ssn = e2.Ssn
+    INNER JOIN employee e3 ON e2.Super_ssn = e3.Ssn 
+
+    WHERE e3.salary > ANY (
+        SELECT Salary FROM employee WHERE Ssn IN (
+            SELECT DISTINCT Super_ssn FROM employee
+        )
+    ); 
+```
+
 > SupSup lists the employee’s supervisor’s supervisor with the employee
 > 
 > Filters SupSup for there being a supervisor with a lower salary than the supervisor’s supervisor
@@ -64,12 +77,27 @@ WHERE Address NOT LIKE '%London%' AND E.Salary > (MinSal * 1.2)
 > Then use this to find employee’s outside London with >1.2x this minimum
 
 ## Part D
+
 ```sql
-SELECT DISTINCT E.Salary
-FROM Employee E
-WHERE 2 = (SELECT COUNT(DISTINCT(E2.Salary))
-          FROM Employee E2 WHERE E2.Salary > E.Salary)
+SELECT MIN(Salary) 
+FROM (
+    SELECT Salary 
+    FROM employee 
+    ORDER BY Salary 
+    DESC LIMIT 3
+);
 ```
+
+Or:
+
+```sql
+SELECT Salary
+FROM EMPLOYEE
+ORDER BY Salary DESC
+OFFSET 2
+LIMIT 1
+```
+
 > Retrieves the salary of an employee with exactly 2 salaries higher than it
 
 

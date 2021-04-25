@@ -46,8 +46,8 @@ T3: ID of any region for which a higher temperature region exists (all regions t
 
 T3: ID of any region for which a lower temperature region exists (all regions that are not the min)
 
-T5: ID of region with no higher temperature (max temp)
+T5: ID of region/s with no higher temperature (max temp)
 
-T6: ID of region with no lower temperature (min temp)
+T6: ID of region/s with no lower temperature (min temp)
 
-Result: Name of the region with the highest temperature and region with the lowest temperature 
+Result: Name of the region/s with the highest temperature and region/s with the lowest temperature 
