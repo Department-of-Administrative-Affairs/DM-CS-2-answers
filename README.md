@@ -1,6 +1,11 @@
 # DM-CS-2-answers
 
-This is a repository to store mutualised past paper solutions and other material for DM and CS modules in second year.
+This is a repository to store mutualised past paper solutions and other material for DM and CS modules in second year.:
+
+# Closed folders
+Until at least the 7th of May, the following folders will no longer accept submissions:
+
+* CS258 _Databases_
 
 # Contributing
 
