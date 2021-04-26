@@ -56,13 +56,16 @@ Avg = 12.8
 
 ### ii
 
-Here we assume that when a new process comes, the process queue gets adjusted in order of priority.
+This has had some clarification from the lecturer:
 
-P1, P2, P3, P5, P2, P4, P1, P3, P5, P4, P1, P3, P5, P1
+- Processes who have not yet executed for any time remain at the front of the queue in priority order.
+- As with normal RR, once a process has had it's time quantum, it is put at the back of the queue.
+
+P1, P2, P3, P5, P4, P1, P2, P3, P5, P4, P1, P3, P5, P1
 
 P1 = 36 - 10 - 0 = 26
 
-P2 = 14 - 5 - 2 = 7
+P2 = 20 - 5 - 2 = 13
 
 P3 = 33 - 7 - 4 = 22
 
@@ -70,4 +73,4 @@ P4 = 29 - 6 - 4 = 19
 
 P5 = 35 - 8 - 6 = 21
 
-Avg = 19
+Avg = 20.2
