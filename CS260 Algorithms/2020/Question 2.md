@@ -8,10 +8,10 @@ Output: Shortest path to all nodes from s.
 
 Running Time: O(|V|<sup>2</sup>) with queue or array, O(|E|\*log(|V|)) with binary heaps.
 
-### (i) Bellman–Ford’s algorithm
-Input: Directed Graph G(V, E) with weights W, a source node s.
+### (ii) Bellman–Ford’s algorithm
+Input: Directed Graph G(V, E) with weights W, a destination node t.
 
-Output: Shortest path to all nodes from s.
+Output: Shortest path to t from all nodes.
 
 Running Time: O(|V|\*|E|)
 
