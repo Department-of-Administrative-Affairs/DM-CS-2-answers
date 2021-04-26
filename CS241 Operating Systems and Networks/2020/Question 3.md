@@ -60,10 +60,11 @@ Therefore 12 bits for page offset
 
 ![\color{#888}{
 \begin{align*}
-32 - 12 = \text{ number of bits for page entries } = 10 \\
-2^{16} \text{page entries}
+32 - 12 = \text{ number of bits for page entries } &= 20 \\
+2^{20} \text{ page entries }
 \end{align*}
-}](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Ccolor%7B%23888%7D%7B%0A%5Cbegin%7Balign%2A%7D%0A32+-+12+%3D+%5Ctext%7B+number+of+bits+for+page+entries+%7D+%3D+10+%5C%5C%0A2%5E%7B16%7D+%5Ctext%7Bpage+entries%7D%0A%5Cend%7Balign%2A%7D%0A%7D)
+}
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Ccolor%7B%23888%7D%7B%0A%5Cbegin%7Balign%2A%7D%0A32+-+12+%3D+%5Ctext%7B+number+of+bits+for+page+entries+%7D+%26%3D+20+%5C%5C%0A2%5E%7B20%7D+%5Ctext%7B+page+entries+%7D%0A%5Cend%7Balign%2A%7D%0A%7D%0A)
 
 ### iii
 

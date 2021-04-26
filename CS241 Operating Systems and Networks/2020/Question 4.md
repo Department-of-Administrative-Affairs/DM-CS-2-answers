@@ -68,12 +68,12 @@ Each one will require the sum of RNN1 to RNNn for DNS lookup plus 2 \* RNN0 to c
 
 ### i
 
-DNS_Lookup + RTT0 + RTT0 + 8 * RTT0 = DNS_Lookup + 18 * RTT0
+DNS_Lookup + RTT0 + RTT0 + 8 \* (2 \* RTT0) = DNS_Lookup + 18 * RTT0
 
 ### ii
 
-DNS_Lookup + RTT0 + RTT0 + 2 * (2 * RTT0) = DNS_Lookup + 6 * RTT0
+DNS_Lookup + RTT0 + RTT0 + 2 \* (2 \* RTT0) = DNS_Lookup + 6 \* RTT0
 
 ### iii
 
-DNS_Lookup + RTT0 + RTT0 + RTT0 = DNS_Lookup + 3 * RTT0
+DNS_Lookup + RTT0 + RTT0 + RTT0 = DNS_Lookup + 3 \* RTT0
