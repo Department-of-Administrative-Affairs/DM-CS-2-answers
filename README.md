@@ -6,6 +6,7 @@ This is a repository to store mutualised past paper solutions and other material
 Until at least the 7th of May, the following folders will no longer accept submissions:
 
 * CS258 _Databases_
+* CS241 _Operating Systems and Computer Networks_
 
 # Contributing
 
