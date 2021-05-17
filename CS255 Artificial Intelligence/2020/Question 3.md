@@ -18,3 +18,19 @@ Here, **action monitoring** requires checking c3 and c4 as the preconditions of 
 
 ## Part d
 Backtrack and try something else.
+
+## Part e
+### i.
+Conflict set is {r1, r2, r4} as they all could be fired next.
+
+### ii.
+Conflict set is {r2, r5} as r4 is less specific, so specificity ignores it.
+
+>Specificity fires the most specific rule first.
+
+>Refractoriness allows each rule to fire only once on the same data.
+
+### iii.
+r2 will be chosen, as `b` was added before `c`.
+
+>Recency fires the rules in the order which the data arrives in the knowledge base, using the most up-to-date information.
