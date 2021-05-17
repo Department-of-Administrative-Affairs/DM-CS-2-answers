@@ -26,5 +26,7 @@ f4(Blocked Drains)
 
 f5(Bridge Closed, Flooding)
 
-### iii.
-Unsure
+### ii.
+Make new factors by removing unnecessary variables and mulyiplying through.
+
+Not convinced by my answer.
