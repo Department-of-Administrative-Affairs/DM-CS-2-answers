@@ -34,3 +34,18 @@ Conflict set is {r2, r5} as r4 is less specific, so specificity ignores it.
 r2 will be chosen, as `b` was added before `c`.
 
 >Recency fires the rules in the order which the data arrives in the knowledge base, using the most up-to-date information.
+
+## Part f
+**Abduction** involves making assumptions to explain observations.
+
+**Default Reasoning** involves making assumptions of normality even if they might not be true.
+
+It is easier to assume a default and not worry about doing some more expensive reasoning until the default assumption is found to be not true.
+
+## Part g
+| Rule fired | KB contents   |
+|------------|---------------|
+|1           |A,E            |
+|4           |A,E,F,B        |
+|2, 5        |A,E,F,B,C,D,G  |
+|3           |A,E,F,B,C,D,G,Z|
