@@ -60,15 +60,15 @@ Travel along edges in opposite direction to arrows.
 If travelling back along an edge from `u` to `v` with weight `x`, and `Entry(v)+x < Entry(u)`, set `Entry(u)` to `Entry(v)+x`
 
 ## Part c
-H2 is the best as it will be closest to the actual cost, without going over, as h1...hn are all also underestimates.
-
 >An admissible heuristic is one that is always an **underestimate** of the actual cost path to a node
+
+H2 is the best as it will be closest to the actual cost, without going over, as h1...hn are all also underestimates.
 
 H1 is admissible as `mean(h1...hn)` is always less than or equal to `max(h1...hn)` for any h.
 
 H3 is NOT always admissible as the sum of all the heuristics is likely to be greater than the actual distance, thus making the sum an *overestimate*.
 
 ## Part d
-Remove any nodes you encounter which are already on the path. For example, `\<SABCDA\>` will be pruned at depth 6, because `A` is already on the path.
+Remove any nodes you encounter which are already on the path. For example, `<SABCDA>` will be pruned at depth 6, because `A` is already on the path.
 
 Time needed is O(|p|) where |p| is the length of each new path, as every new path added must be checked in its entirety.
