@@ -49,3 +49,5 @@ It is easier to assume a default and not worry about doing some more expensive r
 |4           |A,E,F,B        |
 |2, 5        |A,E,F,B,C,D,G  |
 |3           |A,E,F,B,C,D,G,Z|
+
+>**Forward chaining** involves working from what you know (what is in the KB) and firing **all available rules** at each stage, until no more rules can be fired, at which point you check whether the goal has been achieved.
