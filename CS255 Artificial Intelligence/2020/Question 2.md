@@ -16,52 +16,110 @@ Added H node to influence diagram in file `2a iv.`
 
 ## Part b
 ### i.
-f1(Run, Rain)
+f<sub>1</sub>(Run, Rain)
 
-f2(Rain)
+f<sub>2</sub>(Rain)
 
-f3(Flooding, Blocked Drains, Rain)
+f<sub>3</sub>(Flooding, Blocked Drains, Rain)
 
-f4(Blocked Drains)
+f<sub>4</sub>(Blocked Drains)
 
-f5(Bridge Closed, Flooding)
+f<sub>5</sub>(Bridge Closed, Flooding)
 
 ### ii.
-We need to find `P(Blocked Drains | Bridge Closed, Run)`.  
-Let event `E = Blocked Drains ∧ Bridge Closed ∧ Run`.  
-`E` can be described by a set of possibilities:
-```
-{Blocked Drains ∧ Bridge Closed ∧ Run ∧ Flooding ∧ Rain,
- Blocked Drains ∧ Bridge Closed ∧ Run ∧ Flooding ∧ ¬Rain,
- Blocked Drains ∧ Bridge Closed ∧ Run ∧ ¬Flooding ∧ Rain,
- Blocked Drains ∧ Bridge Closed ∧ Run ∧ ¬Flooding ∧ ¬Rain}
-```
-`P(E)` is equal to the sum of the probabilities of the above possibilities.
-```
-P(Blocked Drains ∧ Bridge Closed ∧ Run ∧ Flooding ∧ Rain)
-  = P(Blocked Drains) x P(Bridge Closed | Flooding) x P(Run | Rain) x P(Flooding | Rain, Blocked Drains) x P(Rain)
-  = .3 x .8 x .2 x .8 x .4
-  = .01536
-  
-P(Blocked Drains ∧ Bridge Closed ∧ Run ∧ Flooding ∧ ¬Rain)
-  = P(Blocked Drains) x P(Bridge Closed | Flooding) x P(Run | ¬Rain) x P(Flooding | ¬Rain, Blocked Drains) x P(¬Rain)
-  = .3 x .8 x .7 x .5 x .6
-  = .0504
-  
-P(Blocked Drains ∧ Bridge Closed ∧ Run ∧ ¬Flooding ∧ Rain)
-  = P(Blocked Drains) x P(Bridge Closed | ¬Flooding) x P(Run | Rain) x P(¬Flooding | Rain, Blocked Drains) x P(Rain)
-  = .3 x .1 x .2 x .2 x .4
-  = .00048
-  
-P(Blocked Drains ∧ Bridge Closed ∧ Run ∧ ¬Flooding ∧ ¬Rain)
-  = P(Blocked Drains) x P(Bridge Closed | ¬Flooding) x P(Run | ¬Rain) x P(¬Flooding | ¬Rain, Blocked Drains) x P(¬Rain)
-  = .3 x .1 x .7 x .5 x .6
-  = .0063
-```
-Hence:
-```
-P(Blocked Drains | Bridge Closed, Run)
-  = P(E)
-  = .01536 + .0504 + .00048 + .0063
-  = .07254
-```
+Note some shorthands: Flooding = F, Blocked Drains = BD, and Bridge Closed = BC.  
+We need to find `P(BD|BC,Run)`.
+
+**Step 1:** Set Run = T, BC = T, and remove from factors f<sub>1</sub> and f<sub>5</sub>, respectively.
+
+f<sub>1</sub>(Rain):  
+| Rain | val |
+|------|-----|
+| T    | .2  |
+| F    | .7  |
+
+f<sub>5</sub>(F):
+| F | val |
+|---|-----|
+| T | .8  |
+| F | .1  |
+
+**Step 2:** Eliminate variables. Start by eliminating F.
+
+f<sub>3</sub>(F, BD, Rain):  
+| F | BD | Rain | val |
+|---|----|------|-----|
+| T | T  | T    | .8  |
+| T | T  | F    | .5  |
+| T | F  | T    | .6  |
+| T | F  | F    | .2  |
+| F | T  | T    | .2  |
+| F | T  | F    | .5  |
+| F | F  | T    | .4  |
+| F | F  | F    | .8  |
+
+Multiply all factors containing F.  
+f<sub>3</sub> x f<sub>5</sub> = f<sub>3,5</sub>(F, BD, Rain):  
+| F | BD | Rain | val  |
+|---|----|------|------|
+| T | T  | T    | .64  |
+| T | T  | F    | .4   |
+| T | F  | T    | .48  |
+| T | F  | F    | .16  |
+| F | T  | T    | .02  |
+| F | T  | F    | .05  |
+| F | F  | T    | .04  |
+| F | F  | F    | .08  |
+
+Sum F out.  
+Σ<sub>F</sub> f<sub>3,5</sub> = f<sub>6</sub>(BD, Rain):  
+| BD | Rain | val |
+|----|------|-----|
+| T  | T    | .66 |
+| T  | F    | .45 |
+| F  | T    | .52 |
+| F  | F    | .24 |
+
+Now we eliminate Rain.
+
+f<sub>2</sub>(Rain):  
+| Rain | val |
+|------|-----|
+| T    | .4  |
+| F    | .6  |
+
+Multiply all factors containing Rain.  
+f<sub>1</sub> x f<sub>2</sub> x f<sub>6</sub> = f<sub>1,2,6</sub>(BD, Rain):  
+| BD | Rain | val   |
+|----|------|-------|
+| T  | T    | .0528 |
+| T  | F    | .189  |
+| F  | T    | .0416 |
+| F  | F    | .1008 |
+
+Sum Rain out.  
+Σ<sub>Rain</sub> f<sub>1,2,6</sub> = f<sub>7</sub>(BD):  
+| BD | val   |
+|----|-------|
+| T  | .2418 |
+| F  | .1424 |
+
+**Step 3:** Multiply together factors containing BD.
+
+f<sub>4</sub>(BD):  
+| BD | val |
+|----|-----|
+| T  | .3  |
+| F  | .7  |
+
+f<sub>4</sub> x f<sub>7</sub> = f<sub>8</sub>(BD):  
+| BD | val     |
+|----|---------|
+| T  | .07254  |
+| F  | .09968  |
+
+Finally:  
+P(BD|BC,Run)  
+= f<sub>8</sub>(BD) / Σ<sub>BD</sub> f<sub>8</sub>(BD)  
+= .07254 / .07254 + .09968  
+= .42121
