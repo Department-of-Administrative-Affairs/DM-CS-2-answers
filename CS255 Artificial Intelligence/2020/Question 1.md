@@ -31,7 +31,7 @@ P(shower|OB) = (.82 x .1) / .19
              = .43158
 ```
 
-The same logic holds for finding `(shower|NN)`:
+The same logic holds for finding `P(shower|NN)`:
 
 ```
 P(shower|NN) = (P(NN|shower) x P(shower)) / P(NN)
@@ -45,7 +45,13 @@ P(shower|NN) = (.88 x .1) / .223
 Since 0.43158 > 0.39462 the **observatory** is a more reliable indicator
 
 ### ii.
-No clue lol
+We need to determine which prediction is more likely to be correct, i.e., `P(¬shower|¬NN)` vs. `P(shower|OB)`.
+Using Baye's rule:
+```
+P(¬shower|¬NN) = (.85 x .9) / (.85 x .9 + .12 x .1)
+               = .98456
+```
+Since `P(¬shower|¬NN)` > `P(shower|OB)`, the scientist shouldn't expect a meteor shower.
 
 
 ## Part c
@@ -60,7 +66,35 @@ SNOW  ---> ICY ROAD ---> ACCIDENT
 >Diagram has each event in a bubble with its probability table next to it
 
 ### ii.
-Answer might be .57 but not certain. Too many tables to draw out.
+Using Baye's rule:
+```
+P(S|A) = (P(A|S) x P(S)) / P(A)
+```
+To calculate `P(A)`:
+```
+P(A) = P(S) x P(A|S) + P(¬S) x P(A|¬S)
+```
+We need `P(A|S)` and `P(A|¬S)`. S and A are conditionally independent, since the BBN obeys the Markov condition and neither S nor A are parents/children of each other.
+Using Chain rule:
+```
+P(A|S) = P(A|I) x P(I|S) + P(A|¬I) x P(¬I|S)
+       = .6 x .7 + .5 x .3
+       = .57
+
+P(A|¬S) = P(A|I) x P(I|¬S) + P(A|¬I) x P(¬I|¬S)
+        = .6 x .4 + .5 x .6
+        = .54
+```
+Hence, for `P(A)`:
+```
+P(A) = .3 x .57 + .7 x .54
+     = .549
+```
+Therefore, `P(S|A)`:
+```
+P(S|A) = (.57 x .3) / .549
+       = .31148
+```
 
 ## Part d
 To find the probability of one event occurring regardless of the others, you can sum together all values for which it is True or False and use them collectively.
