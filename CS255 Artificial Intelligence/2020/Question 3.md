@@ -31,9 +31,9 @@ Conflict set is {r2, r5} as r4 is less specific, so specificity ignores it.
 >Refractoriness allows each rule to fire only once on the same data.
 
 ### iii.
-r2 will be chosen, as `b` was added before `c`.
+r5 will be chosen, as `c` was most recently added.
 
->Recency fires the rules in the order which the data arrives in the knowledge base, using the most up-to-date information.
+>Recency: fire the rule that used the data most recently entered into the working memory.
 
 ## Part f
 **Abduction** involves making assumptions to explain observations.
