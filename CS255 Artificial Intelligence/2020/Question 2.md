@@ -12,7 +12,8 @@ Shown on diagram by a filled in triangle after the decision node.
 Influence diagram shown in file `2a iii.`
 
 ### iv.
-Added H node to influence diagram in file `2a iv.`
+Added H node to influence diagram in file `2a iv.` 
+**NB** Unlike the what is in the file, **P**(*P*) should be replaced with **P**(*P* | *H*) = 90&nbsp;%
 
 ## Part b
 ### i.
