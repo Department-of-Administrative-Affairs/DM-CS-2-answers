@@ -1,3 +1,30 @@
+# a 
+> This might not be a full proof, but I believe it is conceptually correct. I think only the second half is in fact needed to prove this, but kept both for completion.
+
+This requires equivalence between languages accepted by universal-NFAs (UNFAs) and Regular Languages: UNFA ⟺ RL.
+
+**RL ⟹ UNFA**
+
+Any Regular Language has a DFA 𝐷 = (𝑄, 𝛴, 𝑞₀, 𝐹, 𝛿) that precisely recognises it.  
+This DFA can be redefined as an NFA 𝑁 = (𝑄, 𝛴, 𝑞₀, 𝐹, 𝛿') (trivially redefining the transition function 𝛿 to result in singletons instead of states 𝛿').  
+As 𝑁 operates in an exactly equivalent way to 𝐷, only one possible run (accepting or otherwise) exists for input string x (as with DFAs).  
+Therefore a UNFA 𝑈 = 𝑁 exists that is equivalent to 𝑁, as when only 1 possible run exists, both some run being accepting and all runs being accepting are equivalent.  
+Therefore, any regular language has an equivalent UNFA, which accepts precisely the same language.
+
+**UNFA ⟹ RL**
+
+UNFA 𝑈 accepting string 𝑥  
+⟺ 𝑈 only accepts string 𝑥 when all runs of U on 𝑥 are accepting  
+⟺ ∀𝑟 : 𝑟 is an accepting run of U on 𝑥  
+⟺ ¬(∃𝑟 : 𝑟 is not an accepting run of U on 𝑥)  
+⟺ ¬(∃𝑟 : 𝑟 is an accepting run of U̅ on 𝑥)  
+⟺ ¬(∃𝑟 : 𝑟 is an accepting run of U̅ on 𝑥)  
+⟺ ¬(NFA 𝑁 = U̅ accepting x)  
+⟺ N̅ accepting 𝑥.
+
+As Regular Languages are closed under complementation and 𝑁 is an NFA (represents a regular language), 𝑈 must also represent a regular language.  
+As we have proven both RL ⟹ UNFA and UNFA ⟹ RL, UNFA ⟺ RL, so UNFAs precisely recognise regular languages.
+
 # b
 L = {a<sup>n</sup>b<sup>n<sup>3</sup></sup>c<sup>n</sup> | n ≥ 0}  
 Assume by contradiction that L is context-free.  
