@@ -64,4 +64,9 @@ R:
 ```
 
 ## 12
-_TODO_
+**True**.  
+Let E be such an enumerator.  
+Define TM R that decides L as follows.  
+R = "On input x:
+1. Run E until string y appears such that |y| > |x|  
+2. If x was enumerated, accept; otherwise, reject."
