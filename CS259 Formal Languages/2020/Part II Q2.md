@@ -1,6 +1,3 @@
-# a
-_TODO_
-
 # b
 L = {a<sup>n</sup>b<sup>n<sup>3</sup></sup>c<sup>n</sup> | n ≥ 0}  
 Assume by contradiction that L is context-free.  
