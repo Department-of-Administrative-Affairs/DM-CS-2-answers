@@ -14,7 +14,9 @@ Add the sensing action before Action2 to check whether the precondition c4 holds
 ## Part c
 **Action monitoring** involves checking the preconditions of only the next action to be performed. **Plan monitoring** involves checking *all* causal links are intact at the current time.
 
-Here, **action monitoring** requires checking c3 and c4 as the preconditions of the next action, Action2. However, **plan monitoring** requires checking c3, c4 and c2 as all the causal links that have been established so far.
+Here, **action monitoring** requires checking c3 and c4 as the preconditions of the next action, Action2. However, **plan monitoring** requires checking c2 and c3 as all the causal links that have been established so far.
+
+![image](https://user-images.githubusercontent.com/8903016/119484817-4bb23100-bd4e-11eb-9100-0aae862d2808.png)
 
 ## Part d
 Backtrack and try something else.
