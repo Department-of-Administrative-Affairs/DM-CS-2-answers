@@ -11,6 +11,8 @@ please file an issue.
 If you are adding a information or similar file about a module, exam paper or anything else, 
 call the file `README.md` in the folder because then Github will preview the file when opened.
 
+No contributions should be submitted between during an exam window.
+You may be refered to the University for academic misconduct should such a submission be made.
 
 ## Maths
 If you are using `*` as a multiplication sign, 
