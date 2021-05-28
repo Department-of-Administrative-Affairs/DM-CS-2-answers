@@ -4,9 +4,9 @@ If L had a finite number of strings, it would be regular.
 
 ## 2
 **False**  
-Let L = {0} ∪ {1} ∪ {0<sup>n</sup>1<sup>n</sup> | n ≥ 0}, which is non-regular.  
-L·L = ({0} ∪ L) ∪ ({1} ∪ L) ∪ ({0<sup>n</sup>1<sup>n</sup> | n ≥ 0} ∪ L), which is non-regular.  
-However, L\* = {(0+1)\*}, which is regular.
+Let *L* = {0} ∪ {1} ∪ {0<sup>_n_</sup>1<sup>_n_</sup> | _n_ ≥ 0}, which is non-regular.  
+*L.L* = {0.*L*} ∪ {1._L_} ∪ {0<sup>_n_</sup>1<sup>_n_</sup> | _n_ ≥ 0}._L_, which is similarly non-regular.  
+However, _L_\* = {(0+1)\*}, which is regular because {0; 1} is a subset of *L* and so we can choose from those two when generating *L\**.
 
 ## 3
 **False**.  
