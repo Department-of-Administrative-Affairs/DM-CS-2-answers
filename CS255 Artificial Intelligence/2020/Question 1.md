@@ -75,7 +75,7 @@ To calculate `P(A)`:
 P(A) = P(S) x P(A|S) + P(¬S) x P(A|¬S)
 ```
 We need `P(A|S)` and `P(A|¬S)`. S and A are conditionally independent, since the BBN obeys the Markov condition and neither S nor A are parents/children of each other.
-Using Chain rule:
+Using the Law of Total Probability:
 ```
 P(A|S) = P(A|I) x P(I|S) + P(A|¬I) x P(¬I|S)
        = .6 x .7 + .5 x .3
