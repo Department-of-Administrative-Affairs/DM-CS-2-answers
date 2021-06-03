@@ -40,8 +40,8 @@ iii. v,y ∈ c*
 Here, uv<sup>0</sup>xy<sup>0</sup>z ∉ L, due to incorrect number of symbols.  
 
 **Case 2**:  
-i. v ∈ aa*bb* or y ∈ aa*bb*  
-ii. v ∈ bb*cc* or y ∈ bb*cc*
+i. v ∈ aa\*bb\* or y ∈ aa\*bb\*  
+ii. v ∈ bb\*cc\* or y ∈ bb\*cc\*
 
 Here, uv<sup>2</sup>xy<sup>2</sup>z ∉ L, due to incorrect ordering of symbols.
 
