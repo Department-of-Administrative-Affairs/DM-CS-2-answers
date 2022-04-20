@@ -66,6 +66,6 @@ INNER JOIN
 (
     SELECT COUNT(Essn) as eCount, Pno, SUM(Hours) AS hours 
     FROM works_on GROUP BY (Pno) HAVING COUNT(Essn) > 1
-) h ON h.Pno = p.Dnum
+) h ON h.Pno = p.Pnumber
 INNER JOIN department d ON p.Dnum = d.Dnumber;
 ```
