@@ -20,11 +20,14 @@ The receiver here should acknowledge the packet otherwise the sender will not mo
 
 ### i
 
-18
+18 transmissions
+1, 2, 3, 4, 5, 6, 7, 5, 6, 7, 8, 9, 7, 8, 9, 10, 9, 10
 
 ### ii 
 
-12
+12 transmissions
+1, 2, 3, 4, 5, 6, 7, 5, 8, 9, 10, 9
+
 
 ## Part D
 
