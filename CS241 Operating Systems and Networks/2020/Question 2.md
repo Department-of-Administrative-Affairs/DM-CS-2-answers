@@ -8,7 +8,7 @@ No since only 4 allowed to sit down at the table meaning there will always be a 
 
 ### ii
 
-No since you always pick up from the left first and drop the right chopstick first. This will cause those with two chopsticks to move around the table anticlockwise. Also the philosopher waiting to sit down will be the only one waiting so when a philosopher leaves the table, they will be guaranteed a place.
+Yes, starvation is possible. This is because there is nothing preventing a philosopher, who has just finished eating, to enter into eating phase again by first releasing the chopsticks and then again acquiring them. This means that other philosophers who may be waiting for one of the chopsticks may have to wait indefinitely leading to starvation.
 
 ## Part B
 
