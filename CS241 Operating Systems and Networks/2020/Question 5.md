@@ -33,12 +33,13 @@ The receiver here should acknowledge the packet otherwise the sender will not mo
 
 ### i
 
-1, 2, 4, 8, 16, 32, 64
+1 RTT to create connection, and:
+1, 2, 4, 8, 16, 32, 64 (7 RTT)
 
-Therefore takes 7 RTT.
+Therefore takes 8 RTT.
 
 ### ii
 
-1, 2, 4, 8, 16, 32, 64, 65, 66, 67, ..., 77
+1 RTT + 1, 2, 4, 8, 16, 32, 64, 65, 66, 67, ..., 77
 
-At 77 over 1MB could've been sent, therefore takes 20 RTT.
+At 77 over 1MB could've been sent, therefore takes 21 RTT.
