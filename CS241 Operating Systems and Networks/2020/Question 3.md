@@ -34,7 +34,7 @@ P1 requests R2, P2 requests R3, P3 requests R1
 
 ### i
 
-P0, P3, P1, P2, P5
+P0, P3, P1, P2, P4
 
 ### ii
 
