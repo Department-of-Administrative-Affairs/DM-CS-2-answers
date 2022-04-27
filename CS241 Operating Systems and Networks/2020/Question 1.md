@@ -31,7 +31,7 @@ Code, Global Variables, Heap
 ## Part D
 
 - One-to-one requires a kernel level thread per user level thread, whereas many-to-many allows you to specify the ratio of user level to kernel level threads
-- Many-to-one has a reduced overhead since there are typically less kernel level threads created which can slow the system down in the case of one-to-one.
+- Many-to-many has a reduced overhead since there are typically less kernel level threads created which can slow the system down in the case of one-to-one.
 
 ## Part E
 
