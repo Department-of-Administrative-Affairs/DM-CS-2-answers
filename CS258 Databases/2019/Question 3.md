@@ -27,7 +27,3 @@ PD1 ← ρ<sub>(Pno)</sub>(π<sub>Pnumber</sub>(σ<sub>Dnum=1</sub>(PROJECT)))
 EWOP ← (π<sub>Essn, Pno</sub>(WORKS_ON))÷(PD1)
 
 π<sub>Lname</sub>((EMPLOYEE)⨝<sub>Ssn=Essn</sub>(EWOP)
-
-Or
-
-π<sub>Lname</sub>(σ<sub>Dnum=1</sub>(EMPLOYEE⨝<sub>Ssn=Essn</sub>WORKS_ON⨝<sub>Pno=Pnumber</sub>PROJECT))
