@@ -12,14 +12,32 @@ If you are adding a information or similar file about a module, exam paper or an
 call the file `README.md` in the folder because then Github will preview the file when opened.
 
 No contributions should be submitted between during an exam window.
-You may be refered to the University for academic misconduct should such a submission be made.
+The University may refer you for academic misconduct should such a submission be made.
+
+## Newlines
+Please aim to write every clause on a newline to improve diffing, ie the text above is written:
+```md
+By contributing you agree to licence your work under the current licence. 
+The file you contribute must be in Github-Flavored Markdown, 
+if you believe LaTeX support is neccessary, 
+please file an issue.
+If you are adding a information or similar file about a module, exam paper or anything else, 
+call the file `README.md` in the folder because then Github will preview the file when opened.
+``` 
+and not
+```md
+By contributing you agree to licence your work under the current licence. The file you contribute must be in Github-Flavored Markdown, if you believe LaTeX support is neccessary, please file an issue. If you are adding a information or similar file about a module, exam paper or anything else, call the file `README.md` in the folder because then Github will preview the file when opened.
+```
 
 ## Maths
 If you are using `*` as a multiplication sign, 
-please escape it (ie type `\*`) so there are no rendering issues on other platforms.
-If you wish to include some maths that GitHub doesn't support, use https://tex-image-link-generator.herokuapp.com/ to encode it into a form GH understands. (This site simply puts a image sourced from the GitHub maths renderer site with the url encoded properly). 
-I recommend wrapping the block in `\color{#888}{ ... }` so it is visible in both light and dark mode.
-
+please escape it (ie type `\*`) so there are no rendering issues on other platforms. 
+If you want to use maths use the follwing syntax for inline expressions: 
+`$2\times x$` producing: $2\times x$.
+For display: `$$ \\{a,\\ b \\} $$`
+$$  \\{a,\\ b \\}  $$
+Note that you will need to use a double backslash for single letter TeX commands, 
+as well as `/` (ie `\\`) and `\\` (ie `\\\\`).
 # Licence
 
 CC BY-SA 3 or later.
