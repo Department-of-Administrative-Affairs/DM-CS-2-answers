@@ -40,11 +40,11 @@ Result(n) &= \pi_{name}(RT \bowtie (T5 \cup T6))\\
 
 T1: renamed highT to h
 
-T2: renamed low T to l
+T2: renamed lowT to l
 
 T3: ID of any region for which a higher temperature region exists (all regions that are not the max)
 
-T3: ID of any region for which a lower temperature region exists (all regions that are not the min)
+T4: ID of any region for which a lower temperature region exists (all regions that are not the min)
 
 T5: ID of region/s with no higher temperature (max temp)
 
